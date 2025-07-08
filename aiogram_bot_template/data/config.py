@@ -13,7 +13,7 @@ env = Env()
 env.read_env()
 
 BOT_TOKEN: str = env.str("BOT_TOKEN")
-BOT_ID: str = BOT_TOKEN.split(":")[0]
+BOT_ID: str = BOT_TOKEN.split(":", maxsplit=1)[0]
 
 LOGGING_LEVEL: int = env.int("LOGGING_LEVEL", 10)
 
